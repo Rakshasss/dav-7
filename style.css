@@ -15,7 +15,7 @@ nav {
   display: flex;
   justify-content: right;
   align-items: center;
-  gap: 20px;
+  gap: 45px;
   list-style: none;
   margin-right: 40px;
   margin-top: -45px;
@@ -29,6 +29,40 @@ nav {
   border-bottom: 1px solid;
   border-color: white;
   padding-bottom: 10px;
+}
+.sia li {
+  position: relative;
+}
+.sia #li1 ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: blue;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  border: 1px solid #000000;
+  border-top: none;
+}
+.sia #li1:hover ul {
+  max-height: 200px;
+}
+.sia #li1 ul {
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.sia #li1:hover ul {
+  background: blue;
+}
+
+.sia #li1 ul a {
+  padding: 10px;
+}
+
+#li1 {
+  transition: background 0.3s ease;
 }
 #li6 a {
   border: 1px solid white;
@@ -84,4 +118,24 @@ main h2 {
   gap: 10px;
   top: 44%;
   left: 90%;
+}
+#fotka {
+  transform: translateY(100%);
+  animation: scroll 3s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+.mt-kont div {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.mt-kont div:hover {
+  transform: scale(1.2);
 }
